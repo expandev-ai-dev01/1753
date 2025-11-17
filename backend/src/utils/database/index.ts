@@ -6,7 +6,7 @@
  * @module utils/database
  */
 
-import { getPool, ExpectedReturn, IRecordSet } from '@/instances/database';
+import { getPool, ExpectedReturn } from '@/instances/database';
 
 /**
  * @summary
@@ -105,3 +105,5 @@ export async function commitTransaction(transaction: any): Promise<void> {
 export async function rollbackTransaction(transaction: any): Promise<void> {
   await transaction.rollback();
 }
+
+export { ExpectedReturn };
